@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${titulo}">Title</title>
 </head>
 <body>
-
+<div class="card text-center">
+    <div class="card-header text-bg-warning">
+      CALCULADORA DE PROMEDIO
+    </div>
+    <div class="card-body">
+        <form th:action="@{/promedio}" method="post" th:object="${notas}">
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="txtnota1" placeholder="0"
+                       th:field="*{nota1}">
+                <label for="txtnota1">Ingrese nota 1°</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="txtnota2" placeholder="0"
+                       th:field="*{nota2}">
+                <label for="txtnota2">Ingrese nota 2°</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="txtnota3" placeholder="0"
+                       th:field="*{nota3}">
+                <label for="txtnota3">Ingrese nota 3°</label>
+            </div>
+            <hr/>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+            <p></p>
+            <div th:if="${mostrarMensaje}" class="alert alert-success" role="alert">
+                <span th:text="${resultado} ?:''"></span>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
 </html>
