@@ -22,7 +22,6 @@ public class CompraArticuloController {
 
     @PostMapping("calculadora")
     public String procesoCalculadora(@ModelAttribute("articulo") CompraArticuloModel articulo, Model model){
-        model.addAttribute("titulo", "Calculadora Articulo");
         double precio_final = articulo.getPrecio() * articulo.getCantidad();
         double descuento = 0;
         String tipo = "nulo";
