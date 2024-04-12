@@ -6,5 +6,5 @@ import lombok.Setter;
 @Setter
 public class CompraArticuloModel {
     private int cantidad;
-    private int precio;
+    private double precio;
 }

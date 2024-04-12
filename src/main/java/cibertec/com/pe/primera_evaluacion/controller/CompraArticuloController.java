@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CompraArticuloController {
 
-    @GetMapping
+    @GetMapping("/calculadora")
     public String calculadoraCompra(Model model) {
         model.addAttribute("titulo", "Calculadora Articulo");
         model.addAttribute("articulo", new CompraArticuloModel());
+        model.addAttribute("mostrarMensaje", false);
 
         return "calculadora-compra";
     }
