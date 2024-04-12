@@ -16,7 +16,7 @@ public class NumberController {
 
     @GetMapping("/numero-perfecto")
     public String numerosPerfectos(Model model){
-        model.addAttribute("titulo", "Número Perfecto");
+        model.addAttribute("titulo", "Numero Perfecto");
         model.addAttribute("perfecto", new NumberModel());
         model.addAttribute("mostrarMensaje", false);
         return "numero-perfecto";
