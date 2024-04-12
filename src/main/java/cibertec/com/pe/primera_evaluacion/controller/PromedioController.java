@@ -13,7 +13,7 @@ public class PromedioController {
 
     @GetMapping("/promedio")
     public String promedio(Model model) {
-        model.addAttribute("titulo", "Calculadora de Promedio");
+        model.addAttribute("titulo", "Encontrando el Número Perfecto");
         model.addAttribute("notas", new PromedioModel());
         model.addAttribute("mostrarMensaje", false);
         return "promedio";
